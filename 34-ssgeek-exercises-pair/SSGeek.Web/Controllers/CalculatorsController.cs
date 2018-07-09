@@ -20,7 +20,7 @@ namespace SSGeek.Web.Controllers
         // GET: Calculators/AlienWeight
         public ActionResult AlienWeight()
         {
-            return View();
+            return View(new AlienWeightModel());
         }
 
         // GET: calcualtors/alienweightresult?planet=xyz&weight=123

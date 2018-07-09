@@ -1,4 +1,4 @@
-﻿
+﻿@model AlienWeightModel
 
 @{
     ViewData["Title"] = "Alien Weight Result";
@@ -7,5 +7,6 @@
 
 <section id="calculatorResult" class="centeredPanel">
 
+    <h1>Your weight on @Model.Planet is @Model.GetConvertedWeight() lbs. </h1>
 
 </section>
