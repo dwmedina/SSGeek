@@ -20,7 +20,7 @@ namespace SSGeek.Web.Controllers
         // GET: Calculators/AlienWeight
         public ActionResult AlienWeight()
         {
-            return View(new AlienWeightModel());
+            return View();
         }
 
         // GET: calcualtors/alienweightresult?planet=xyz&weight=123
@@ -29,7 +29,17 @@ namespace SSGeek.Web.Controllers
             return View(model);
         }
 
-        
+        public ActionResult AlienAge()
+        {
+            return View();
+        }
+
+        public ActionResult AlienAgeResult(AlienAgeModel model)
+        {
+            return View(model);
+        }
+
+
 
         private List<SelectListItem> planets = new List<SelectListItem>()
         {

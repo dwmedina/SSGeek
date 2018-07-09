@@ -3,34 +3,34 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Web;
+using System.Threading.Tasks;
 
 namespace SSGeek.Web.Models
 {
-    public class AlienWeightModel
+    public class AlienAgeModel
     {
-        [Display(Name ="Choose a planet")]
+        [Display(Name = "Choose a planet")]
         public string Planet { get; set; }
-        [Display(Name ="Enter your Earth weight")]
-        public int EarthWeight { get; set; }
+        [Display(Name = "Enter your Age")]
+        public int EarthAge { get; set; }
 
-        public double GetConvertedWeight()
+        public double GetConvertedAge ()
         {
-            Dictionary<string, double> conversionRates = new Dictionary<string, double>()
+            Dictionary<string, double> ageConversionRates = new Dictionary<string, double>()
             {
-                {"Mercury", 0.38 },
-                {"Venus", 0.91 },
-                {"Earth",1.0 },
-                {"Mars",0.38 },
-                {"Jupiter",2.34 },
-                {"Saturn",1.06 },
-                {"Uranus",0.92 },
-                {"Neptune",1.19 },
-                {"Pluto",0.06 }
+                {"Mercury",4.15 },
+                {"Venus",1.62 },
+                {"Earth",1.00 },
+                {"Mars",.53 },
+                {"Jupiter",.084 },
+                {"Saturn",.033 },
+                {"Uranus",.011 },
+                {"Neptune",.006 },
+                {"Pluto",.004 }
 
             };
 
-            return EarthWeight* conversionRates[Planet];
+            return EarthAge * ageConversionRates[Planet];
 
         }
 
@@ -46,4 +46,6 @@ namespace SSGeek.Web.Models
             new SelectListItem() {Text= "Pluto"}
         };
     }
+
 }
+
