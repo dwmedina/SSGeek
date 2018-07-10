@@ -1,0 +1,21 @@
+﻿@model List<ForumPostModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<section id="calculatorResult" class="centeredPanel">
+    <h2>Index</h2>
+    <table>
+        <tbody>
+            @foreach (var post in Model)
+            {
+                <tr>
+                    <td><strong>@post.Subject</strong></td>
+                    <td>by @post.Username on @post.PostDate.Date at @post.PostDate.TimeOfDay</td>
+                    <td>@post.Message</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</section>
