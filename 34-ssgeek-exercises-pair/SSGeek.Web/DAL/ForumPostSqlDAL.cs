@@ -60,13 +60,36 @@ namespace SSGeek.Web.DAL
                 Username = Convert.ToString(reader["username"]),
                 Subject = Convert.ToString(reader["subject"]),
                 Message = Convert.ToString(reader["message"]),
-                PostDate = DateTime.Now
+                PostDate = Convert.ToDateTime(reader["post_date"])
             };
         }
 
         public bool SaveNewPost(ForumPostModel post)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                    conn.Open();
+
+                    string sql = "Insert Into forum_post Values (@name, @sub, @msg, GETDATE());";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@name", post.Username);
+                    cmd.Parameters.AddWithValue("@sub", post.Subject);
+                    cmd.Parameters.AddWithValue("@msg", post.Message);
+
+                    if (cmd.ExecuteNonQuery()==1)
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            return false;
         }
     }
 }

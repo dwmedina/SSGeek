@@ -5,14 +5,15 @@
 }
 <section id="calculatorResult" class="centeredPanel">
     <h2>Index</h2>
-    <table>
+    <p><a asp-action="post" asp-controller="forum">Post a message</a></p>
+    <table class="table-striped">
         <tbody>
             @foreach (var post in Model)
             {
                 <tr>
-                    <td><strong>@post.Subject</strong></td>
-                    <td>by @post.Username on @post.PostDate.Date at @post.PostDate.TimeOfDay</td>
-                    <td>@post.Message</td>
+                    <td>
+                        <strong>@post.Subject</strong><br />by @post.Username on @post.PostDate.Date.ToShortDateString() at @post.PostDate.ToShortTimeString()<p></p>@post.Message
+                    </td>
                 </tr>
 
             }

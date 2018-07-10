@@ -163,10 +163,6 @@ input[type=text], input[type=datetime], textarea {
     width: 300px;
 }
 
-th, td {
-    color: white;
-}
-
 table tr:first-child {
     padding-bottom: 10px;
     font-size: 1.1em;
@@ -176,8 +172,6 @@ table td {
     min-width: 75px;
     padding: 5px 5px;
 }
-
-
 
 section.centeredPanel {
     clear: both;
@@ -200,3 +194,7 @@ section.centeredPanel {
         color: #000;
         text-align: left;
     }
+
+.table-striped {
+    width:inherit;
+}

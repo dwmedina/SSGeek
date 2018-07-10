@@ -1,0 +1,19 @@
+﻿@model ForumPostModel
+@{
+    ViewData["Title"] = "Post";
+}
+<section id="calculatorResult" class="centeredPanel">
+    <h2>Post</h2>
+    <form method="post" asp-action="post" asp-controller="forum">
+        <label asp-for="Username"></label>
+        <input asp-for="Username" placeholder="required" required />
+
+        <label asp-for="Subject"></label>
+        <input asp-for="Subject" placeholder="Subject" />
+
+        <label asp-for="Message"></label>
+        <textarea asp-for="Message" placeholder="ex. I'm only .5yrs on Jupiter!"></textarea>
+
+        <input type="submit" value="Post" />
+    </form>
+    </section>
