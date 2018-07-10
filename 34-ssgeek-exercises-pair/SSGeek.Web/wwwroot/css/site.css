@@ -195,6 +195,11 @@ section.centeredPanel {
         text-align: left;
     }
 
+
+/* 
+    The width should be inherited so that 
+    the stripe resembles the width of our section.centeredPanel
+*/
 .table-striped {
     width:inherit;
 }
