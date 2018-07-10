@@ -4,8 +4,10 @@
 }
 <section id="calculatorResult" class="centeredPanel">
     <h2>AlienAgeResult</h2>
-    <h1>If you are @Model.EarthAge years old, then you'd be @Model.GetConvertedAge() years old if you lived on @Model.Planet!</h1>
-
+    <div class="ageResult">
+        <img src="~/images/@(Model.Planet).jpg" />
+        <h1>If you are @Model.EarthAge years old, then you'd be @Model.GetConvertedAge() years old if you lived on @Model.Planet!</h1>
+    </div>
 </section>
 
 

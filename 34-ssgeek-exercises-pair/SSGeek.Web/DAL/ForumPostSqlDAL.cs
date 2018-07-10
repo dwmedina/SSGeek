@@ -64,8 +64,17 @@ namespace SSGeek.Web.DAL
             };
         }
 
+        /// <summary>
+        /// Adds a new post to database.
+        /// </summary>
+        /// <param name="post">Instance of a ForumPost object</param>
+        /// <returns></returns>
         public bool SaveNewPost(ForumPostModel post)
         {
+            if (post.Subject == null)
+            {
+                post.Subject = "No Subject";
+            }
             try
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
