@@ -71,10 +71,13 @@ namespace SSGeek.Web.DAL
         /// <returns></returns>
         public bool SaveNewPost(ForumPostModel post)
         {
+            // Check for null rather than using try / catch
+
             if (post.Subject == null)
             {
                 post.Subject = "No Subject";
             }
+
             try
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
@@ -87,6 +90,7 @@ namespace SSGeek.Web.DAL
                     cmd.Parameters.AddWithValue("@sub", post.Subject);
                     cmd.Parameters.AddWithValue("@msg", post.Message);
 
+                    // Only one row should be affected by inserting a post into the DB
                     if (cmd.ExecuteNonQuery()==1)
                     {
                         return true;

@@ -3,8 +3,13 @@
 @{
     ViewData["Title"] = "Index";
 }
-<section id="calculatorResult" class="centeredPanel">
+
+@* Forum posts need their own sections *@
+<section id="spaceForum" class="centeredPanel">
     <h2>Index</h2>
+
+    @* asp-action=post GETs the forum for us *@
+
     <p class="text-center"><a asp-action="post" asp-controller="forum">Post a message</a></p>
     <table class="table-striped">
         <tbody>
@@ -12,6 +17,7 @@
             {
                 <tr>
                     <td>
+                        @* We could also use div's but <td> work with idea of the forum as a table *@
                         <strong>@post.Subject</strong><br />by @post.Username on @post.PostDate.Date.ToShortDateString() at @post.PostDate.ToShortTimeString()<p></p>@post.Message
                     </td>
                 </tr>

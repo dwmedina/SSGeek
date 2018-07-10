@@ -1,10 +1,12 @@
-﻿@model ForumPostModel
+﻿@* The data on this post page gets sent to the SSGeek DB *@
+@model ForumPostModel
 @{
     ViewData["Title"] = "Post";
 }
 <section id="calculatorResult" class="centeredPanel">
     <h2>Post</h2>
     <form method="post" asp-action="post" asp-controller="forum">
+        @* People need to have a username to post *@
         <label asp-for="Username"></label>
         <input asp-for="Username" placeholder="required" required />
 
@@ -12,6 +14,8 @@
         <input asp-for="Subject" placeholder="Subject" />
 
         <label asp-for="Message"></label>
+        @* Text-area isn't necessary but it looks nice *@
+        @* People need to post actual messages, not empty posts into the database *@
         <textarea asp-for="Message" placeholder="ex. I'm only .5yrs on Jupiter!" required></textarea>
 
         <input type="submit" value="Post" />

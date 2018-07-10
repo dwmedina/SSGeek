@@ -177,7 +177,7 @@ section.centeredPanel {
     clear: both;
     display: block;
     width: 90%;
-    vertical-align: top;
+    /*vertical-align: top;*/
     min-height: 450px;
     background-color: #FFF;
     border-radius: 7px;
@@ -195,6 +195,11 @@ section.centeredPanel {
         text-align: left;
     }
 
+
+/* 
+    The width should be inherited so that 
+    the stripe resembles the width of our section.centeredPanel
+*/
 .table-striped {
     width:inherit;
 }
