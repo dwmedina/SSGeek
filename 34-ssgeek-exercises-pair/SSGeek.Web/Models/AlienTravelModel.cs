@@ -13,9 +13,19 @@ namespace SSGeek.Web.Models
 
         public double CalculateTimeToTravel()
         {
+            //Get planet they want to travel to
+
+            //Get mode of transportation
+
+            //return DistancetoPlanet*
 
             return 0.0;
         }
+
+        public static Dictionary<string, decimal> PlanetDistances = new Dictionary<string, decimal>()
+        {
+
+        };
 
         public static List<SelectListItem> transportationModes = new List<SelectListItem>()
         {

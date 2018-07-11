@@ -97,9 +97,6 @@ li a:hover {
     color: #FFFFFF;
 }
 
-
-
-
 .planets p {
     width: 80%;
     margin: 25px;
@@ -201,5 +198,9 @@ section.centeredPanel {
     the stripe resembles the width of our section.centeredPanel
 */
 .table-striped {
-    width:inherit;
+    width: inherit;
+}
+
+.text-center {
+    text-align:center !important;
 }
