@@ -6,11 +6,11 @@
 <section id="calculatorResult" class="centeredPanel">
     <h2 class="text-center">Alien Age</h2>
 <form asp-action="AlienAgeResult" asp-controller="calculators">
-    <label asp-for="Planet"></label>
-    <select asp-for="Planet" asp-items="AlienAgeModel.planets"></select>
-    
-    <label asp-for="EarthAge"></label>
-    <input asp-for="EarthAge" type="text"/>
+    <label id="alien-age-label" asp-for="Planet"></label>
+    <select id="alien-age-select" asp-for="Planet" asp-items="AlienAgeModel.planets"></select>
+    <div></div>
+    <label id="earth-age-label" asp-for="EarthAge"></label>
+    <input id="earth-age-input" asp-for="EarthAge" type="text"/>
 
     <input class="btn btn-default btn-small" type="submit" value="Calculate Age" />
 </form>

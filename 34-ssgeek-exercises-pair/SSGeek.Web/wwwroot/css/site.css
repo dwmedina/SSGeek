@@ -98,11 +98,20 @@ li a:hover {
     text-align: center;
 }
 
-#alien-weight-select {
-
+#alien-age-select {
+    margin-left: 3.3rem;
 }
 
-#alien-weight-label, #earth-weight-label {
+#alien-weight-select {
+    margin-left: 5rem;
+}
+
+#earth-age-input {
+    margin-left: 4rem;
+}
+
+#alien-weight-label, #earth-weight-label,
+#alien-age-label, #earth-age-label {
     padding-left: 2rem;
     padding-right: 1rem;
 }
