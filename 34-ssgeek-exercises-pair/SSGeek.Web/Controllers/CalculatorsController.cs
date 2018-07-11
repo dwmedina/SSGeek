@@ -46,7 +46,7 @@ namespace SSGeek.Web.Controllers
 
         public ActionResult AlienTravelResult(AlienTravelModel model)
         {
-            return View();
+            return View(model);
         }
 
     }

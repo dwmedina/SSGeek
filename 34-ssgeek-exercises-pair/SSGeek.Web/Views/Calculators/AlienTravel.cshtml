@@ -4,6 +4,12 @@
 }
 <section id="calculatorResult" class="centeredPanel">
     <h2>AlienTravel</h2>
+<form method="get" asp-action="AlienTravelResult" asp-controller="calculators">
+    <label asp-for="Planet" ></label>
+    <select asp-for="Planet" asp-items="AlienTravelModel.planets"></select>
 
+
+    <input type="submit" value="Calculate" />
+</form>
 
 </section>
