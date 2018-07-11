@@ -41,11 +41,11 @@ namespace SSGeek.Web.Models
 
         public static Dictionary<string, double> TransportationRateInMPH = new Dictionary<string, double>()
         {
-            {"walking",3 },
-            {"car",100 },
-            { "bullet train",200},
-            {"boeing 747",570 },
-            {"Concorde",1350 }
+            { "Walking", 3 },
+            { "Car", 100 },
+            { "Bullet Train",200},
+            { "Boeing 747", 570 },
+            { "Concorde", 1350 }
         };
 
         public static List<SelectListItem> planets = new List<SelectListItem>()
@@ -57,16 +57,16 @@ namespace SSGeek.Web.Models
             new SelectListItem() { Text = "Saturn" },
             new SelectListItem() { Text = "Neptune" },
             new SelectListItem() { Text = "Uranus" },
-            new SelectListItem() {Text= "Pluto"}
+            new SelectListItem() { Text= "Pluto"}
         };
 
         public static List<SelectListItem> transportationModes = new List<SelectListItem>()
         {
             new SelectListItem() { Text = "Walking", Value="walking" },
             new SelectListItem() { Text = "Car", Value = "car" },
-            new SelectListItem() { Text = "Bullet Train", Value = "bullet train" },
-            new SelectListItem() { Text = "Boeing 747", Value = "boeing 747" },
-            new SelectListItem() { Text = "Concorde", Value = "concorde" }
+            new SelectListItem() { Text = "Bullet Train", Value = "Bullet Train" },
+            new SelectListItem() { Text = "Boeing 747", Value = "Boeing 747" },
+            new SelectListItem() { Text = "Concorde", Value = "Concorde" }
         };
     }
 }

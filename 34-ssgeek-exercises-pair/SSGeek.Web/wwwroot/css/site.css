@@ -106,12 +106,17 @@ li a:hover {
     margin-left: 5rem;
 }
 
+#travel-style-select {
+
+}
+
 #earth-age-input {
     margin-left: 4rem;
 }
 
 #alien-weight-label, #earth-weight-label,
-#alien-age-label, #earth-age-label {
+#alien-age-label, #earth-age-label,
+#alien-travel-label {
     padding-left: 2rem;
     padding-right: 1rem;
 }

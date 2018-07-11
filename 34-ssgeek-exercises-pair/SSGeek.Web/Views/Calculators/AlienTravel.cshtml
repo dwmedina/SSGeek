@@ -4,12 +4,14 @@
 }
 <section id="calculatorResult" class="centeredPanel">
     <h2>AlienTravel</h2>
-<form method="get" asp-action="AlienTravelResult" asp-controller="calculators">
-    <label asp-for="Planet" ></label>
-    <select asp-for="Planet" asp-items="AlienTravelModel.planets"></select>
+    <form method="get" asp-action="AlienTravelResult" asp-controller="calculators">
+        <label id="alien-travel-label" asp-for="Planet">Choose a planet</label>
+        <select id="alien-travel-select" asp-for="Planet" asp-items="AlienTravelModel.planets"></select>
+        <div></div>
+        <label id="travel-style" asp-for="ModeOfTransport"></label>
+        <select id="travel-style-select" asp-for="ModeOfTransport" asp-items="AlienTravelModel.transportationModes"></select>
 
-
-    <input class="btn btn-default btn-sm" type="submit" value="Calculate" />
-</form>
+        <input class="btn btn-default btn-sm" type="submit" value="Calculate Travel Time" />
+    </form>
 
 </section>
