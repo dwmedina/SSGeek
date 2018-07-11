@@ -132,6 +132,16 @@ li a:hover {
 
 /*** Travel Calculator ***/
 
+#alien-travel-result-header {
+    clear: both;
+    width: 90%;
+    background-color: #FFF;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    margin: 20px auto;
+    margin-bottom: -2rem;
+}
+
 #alien-travel-header, #alien-travel-result-header {
     padding: 2rem;
     text-align: center;
