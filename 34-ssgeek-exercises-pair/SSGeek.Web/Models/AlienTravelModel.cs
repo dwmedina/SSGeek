@@ -35,15 +35,15 @@ namespace SSGeek.Web.Models
             { "Saturn",792248270 },
             { "Uranus",1692662530 },
             { "Neptune",2703959960 },
-            {"Mercury" ,56974146 },
-            {"Venus",25724767 }
+            { "Mercury" ,56974146 },
+            { "Venus",25724767 }
         };
 
         public static Dictionary<string, double> TransportationRateInMPH = new Dictionary<string, double>()
         {
-            { "Walking", 3 },
-            { "Car", 100 },
-            { "Bullet Train",200},
+            { "walking", 3 },
+            { "car", 100 },
+            { "bullet train",200},
             { "Boeing 747", 570 },
             { "Concorde", 1350 }
         };
@@ -57,14 +57,13 @@ namespace SSGeek.Web.Models
             new SelectListItem() { Text = "Saturn" },
             new SelectListItem() { Text = "Neptune" },
             new SelectListItem() { Text = "Uranus" },
-            new SelectListItem() { Text= "Pluto"}
         };
 
         public static List<SelectListItem> transportationModes = new List<SelectListItem>()
         {
-            new SelectListItem() { Text = "Walking", Value="walking" },
-            new SelectListItem() { Text = "Car", Value = "car" },
-            new SelectListItem() { Text = "Bullet Train", Value = "Bullet Train" },
+            new SelectListItem() { Text = "walking", Value="walking" },
+            new SelectListItem() { Text = "car", Value = "car" },
+            new SelectListItem() { Text = "bullet train", Value = "bullet train" },
             new SelectListItem() { Text = "Boeing 747", Value = "Boeing 747" },
             new SelectListItem() { Text = "Concorde", Value = "Concorde" }
         };

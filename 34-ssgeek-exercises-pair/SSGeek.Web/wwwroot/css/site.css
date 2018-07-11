@@ -132,7 +132,7 @@ li a:hover {
 
 /*** Travel Calculator ***/
 
-#alien-travel-header {
+#alien-travel-header, #alien-travel-result-header {
     padding: 2rem;
     text-align: center;
 }
@@ -156,6 +156,14 @@ li a:hover {
 
 #alien-travel-age-input {
     margin-left: 8rem;
+}
+
+#travel-image {
+    height: 20rem;
+}
+
+#travel-result-info {
+    padding: 2rem;
 }
 
 

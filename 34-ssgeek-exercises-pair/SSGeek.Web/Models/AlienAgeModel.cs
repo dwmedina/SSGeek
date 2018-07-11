@@ -25,9 +25,7 @@ namespace SSGeek.Web.Models
                 {"Jupiter",.084 },
                 {"Saturn",.033 },
                 {"Uranus",.011 },
-                {"Neptune",.006 },
-                {"Pluto",.004 }
-
+                {"Neptune",.006 }
             };
 
             return EarthAge * ageConversionRates[Planet];
@@ -42,8 +40,7 @@ namespace SSGeek.Web.Models
             new SelectListItem() { Text = "Jupiter" },
             new SelectListItem() { Text = "Saturn" },
             new SelectListItem() { Text = "Neptune" },
-            new SelectListItem() { Text = "Uranus" },
-            new SelectListItem() {Text= "Pluto"}
+            new SelectListItem() { Text = "Uranus" }
         };
     }
 

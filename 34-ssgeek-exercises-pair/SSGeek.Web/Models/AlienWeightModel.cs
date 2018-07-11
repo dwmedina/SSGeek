@@ -25,9 +25,7 @@ namespace SSGeek.Web.Models
                 {"Jupiter",2.34 },
                 {"Saturn",1.06 },
                 {"Uranus",0.92 },
-                {"Neptune",1.19 },
-                {"Pluto",0.06 }
-
+                {"Neptune",1.19 }
             };
 
             return EarthWeight* conversionRates[Planet];
@@ -42,8 +40,7 @@ namespace SSGeek.Web.Models
             new SelectListItem() { Text = "Jupiter" },
             new SelectListItem() { Text = "Saturn" },
             new SelectListItem() { Text = "Neptune" },
-            new SelectListItem() { Text = "Uranus" },
-            new SelectListItem() {Text= "Pluto"}
+            new SelectListItem() { Text = "Uranus" }
         };
     }
 }
