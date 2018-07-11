@@ -3,15 +3,18 @@
     ViewData["Title"] = "AlienTravel";
 }
 <section id="calculatorResult" class="centeredPanel">
-    <h2>AlienTravel</h2>
+    <h2>Alien Travel Calculator</h2>
     <form method="get" asp-action="AlienTravelResult" asp-controller="calculators">
         <label id="alien-travel-label" asp-for="Planet">Choose a planet</label>
         <select id="alien-travel-select" asp-for="Planet" asp-items="AlienTravelModel.planets"></select>
         <div></div>
-        <label id="travel-style" asp-for="ModeOfTransport"></label>
+        <label id="travel-style" asp-for="ModeOfTransport">Choose a mode of transport</label>
         <select id="travel-style-select" asp-for="ModeOfTransport" asp-items="AlienTravelModel.transportationModes"></select>
-
-        <input class="btn btn-default btn-sm" type="submit" value="Calculate Travel Time" />
+        <div></div>
+        <label id="alien-travel-age" asp-for="EarthAge">Enter your Earth age</label>
+        <input id="alien-travel-age-input" type="text" asp-for="EarthAge" />
+        <div></div>
+        <input id="alien-travel-button" class="btn btn-default btn-sm" type="submit" value="Calculate Travel Time" />
     </form>
 
 </section>

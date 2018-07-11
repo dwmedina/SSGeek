@@ -93,33 +93,62 @@ li a:hover {
     display: flex;
 }
 
+#alien-weight-label, #earth-weight-label,
+#alien-age-label, #earth-age-label,
+#alien-travel-label, #travel-style {
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
+
+/*** Weight Calculator ***/
+
+
 #alien-weight-header {
     padding: 2rem;
     text-align: center;
-}
-
-#alien-age-select {
-    margin-left: 3.3rem;
 }
 
 #alien-weight-select {
     margin-left: 5rem;
 }
 
-#travel-style-select {
 
+/*** Age Calculator ***/
+
+
+#alien-age-select {
+    margin-left: 3.3rem;
 }
 
 #earth-age-input {
     margin-left: 4rem;
 }
 
-#alien-weight-label, #earth-weight-label,
-#alien-age-label, #earth-age-label,
-#alien-travel-label {
-    padding-left: 2rem;
-    padding-right: 1rem;
+
+/*** Travel Calculator ***/
+
+#alien-travel-select {
+    margin-left: 10rem;
 }
+
+#travel-style-select {
+    margin-left: 2rem;
+}
+
+
+#alien-travel-button {
+    margin-left: 24rem;
+}
+
+#alien-travel-age {
+    margin-left: 2rem;
+}
+
+#alien-travel-age-input {
+    margin-left: 8rem;
+}
+
 
 .planets * {
     color: #FFFFFF;
