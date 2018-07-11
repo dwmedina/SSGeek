@@ -11,6 +11,7 @@ namespace SSGeek.Web.Models
         public string Planet { get; set; }
         public string ModeOfTransport { get; set; }
         public int EarthAge { get; set; }
+        public double HoursToTravel { get { return CalculateTimeToTravel(); } }
 
         public double CalculateTimeToTravel()
         {
