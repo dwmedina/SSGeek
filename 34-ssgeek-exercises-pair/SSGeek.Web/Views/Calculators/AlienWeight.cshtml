@@ -4,14 +4,15 @@
 }
 
 <section class="centeredPanel">
+    <h1 id="alien-weight-header">Alien Weight Calculator</h1>
     <br />
     <form asp-action="alienweightresult" asp-controller="Calculators">
-        <label asp-for="Planet" ></label>
-        <select asp-for="Planet" asp-items="AlienWeightModel.planets"></select>
-
-        <label asp-for="EarthWeight"></label>
+        <label id="alien-weight-label" asp-for="Planet" ></label>
+        <select id="alien-weight-select" asp-for="Planet" asp-items="AlienWeightModel.planets"></select>
+        <div></div>
+        <label id="earth-weight-label" asp-for="EarthWeight"></label>
         <input type="text" asp-for="EarthWeight" />
-        <input type="submit" value="Calculate" />
+        <input class="btn btn-default btn-sm" type="submit" value="Calculate" />
     </form>
 
 </section>

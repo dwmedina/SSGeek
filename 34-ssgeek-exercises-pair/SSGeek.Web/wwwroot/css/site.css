@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #000000;
+    background-image: url("https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0ae83373fe7bf60aaf6ceb8daa337fc9&auto=format&fit=crop&w=1057&q=80");
     width: 90%;
     font-family: sans-serif;
     margin: 0 auto;
@@ -91,6 +91,20 @@ li a:hover {
 
 #planets {
     display: flex;
+}
+
+#alien-weight-header {
+    padding: 2rem;
+    text-align: center;
+}
+
+#alien-weight-select {
+
+}
+
+#alien-weight-label, #earth-weight-label {
+    padding-left: 2rem;
+    padding-right: 1rem;
 }
 
 .planets * {
