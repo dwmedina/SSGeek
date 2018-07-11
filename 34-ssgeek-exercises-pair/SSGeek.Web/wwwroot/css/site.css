@@ -116,6 +116,10 @@ li a:hover {
 
 /*** Age Calculator ***/
 
+#alien-age-header {
+    padding: 2rem;
+    text-align: center;
+}
 
 #alien-age-select {
     margin-left: 3.3rem;
@@ -127,6 +131,11 @@ li a:hover {
 
 
 /*** Travel Calculator ***/
+
+#alien-travel-header {
+    padding: 2rem;
+    text-align: center;
+}
 
 #alien-travel-select {
     margin-left: 10rem;
@@ -256,8 +265,4 @@ section.centeredPanel {
 */
 .table-striped {
     width: inherit;
-}
-
-.text-center {
-    text-align:center !important;
 }

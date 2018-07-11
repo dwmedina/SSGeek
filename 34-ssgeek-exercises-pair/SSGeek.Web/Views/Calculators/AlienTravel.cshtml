@@ -3,7 +3,7 @@
     ViewData["Title"] = "AlienTravel";
 }
 <section id="calculatorResult" class="centeredPanel">
-    <h2>Alien Travel Calculator</h2>
+    <h1 id="alien-travel-header">Alien Travel Calculator</h1>
     <form method="get" asp-action="AlienTravelResult" asp-controller="calculators">
         <label id="alien-travel-label" asp-for="Planet">Choose a planet</label>
         <select id="alien-travel-select" asp-for="Planet" asp-items="AlienTravelModel.planets"></select>
