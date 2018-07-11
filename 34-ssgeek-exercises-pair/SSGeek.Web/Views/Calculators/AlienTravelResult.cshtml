@@ -1,7 +1,15 @@
-﻿
+﻿@model AlienTravelModel
 @{
     ViewData["Title"] = "AlienTravelResult";
 }
 
-<h2>AlienTravelResult</h2>
-
+@{double years = Model.HoursToTravel / 8760;
+    double yearsOld = Math.Round((years + Model.EarthAge));
+}
+<section id="calculatorResult" class="centeredPanel">
+    <h2>AlienTravelResult</h2>
+    <div style="display:flex">
+        <img class="calculator-result" src="~/images/@(Model.Planet).jpg" />
+        <p>If you traveled to @Model.Planet by @Model.ModeOfTransport it would take you @(years) years. You would be @yearsOld years old when you arrive! </p>
+    </div>
+</section>

@@ -8,6 +8,11 @@
     <label asp-for="Planet" ></label>
     <select asp-for="Planet" asp-items="AlienTravelModel.planets"></select>
 
+    <label asp-for="ModeOfTransport"></label>
+    <select asp-for="ModeOfTransport" asp-items="AlienTravelModel.transportationModes"></select>
+
+    <label asp-for="EarthAge"></label>
+    <input asp-for="EarthAge" type="number" placeholder="Enter Age Here:" />
 
     <input type="submit" value="Calculate" />
 </form>

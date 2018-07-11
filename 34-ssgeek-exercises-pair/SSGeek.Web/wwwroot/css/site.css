@@ -204,3 +204,8 @@ section.centeredPanel {
 .text-center {
     text-align:center !important;
 }
+
+.calculator-result {
+    width: 200px;
+    height: 200px;
+}
