@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SSGeek.Web.DAL
 {
-    public class ProductSqlDAL
+    public class ProductSqlDAL : IProductDAL
     {             
 
         public Product GetProduct(int id)
@@ -15,7 +15,7 @@ namespace SSGeek.Web.DAL
             throw new NotImplementedException();
         }
 
-        public List<Product> GetProducts()
+        public IList<Product> GetProducts()
         {
             throw new NotImplementedException();
         }

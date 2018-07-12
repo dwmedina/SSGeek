@@ -30,7 +30,11 @@ namespace SSGeek.Web
                 //options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            
+
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+
+            services.AddTransient<IProductDAL, ProductSqlDAL>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -48,7 +52,7 @@ namespace SSGeek.Web
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
