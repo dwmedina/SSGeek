@@ -168,7 +168,7 @@ li a:hover {
     margin-left: 8rem;
 }
 
-#travel-image {
+#travel-image, #age-image, #weight-image {
     height: 20rem;
 }
 
@@ -283,4 +283,18 @@ section.centeredPanel {
 */
 .table-striped {
     width: inherit;
+}
+
+p.text-center {
+    text-align:center !important;
+}
+
+label.label {
+    margin-right: 2em;
+    color: black !important;
+    vertical-align: top !important;
+}
+
+.forum-post-info {
+    display:inline-block;
 }
