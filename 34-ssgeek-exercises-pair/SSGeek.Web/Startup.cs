@@ -34,6 +34,7 @@ namespace SSGeek.Web
             services.AddDistributedMemoryCache();
             services.AddSession();
 
+            services.AddTransient<IProductDAL, ProductSqlDAL>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -51,9 +52,7 @@ namespace SSGeek.Web
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
             app.UseSession();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
