@@ -19,7 +19,9 @@ namespace SSGeek.Web.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var products = dal.GetProducts();
+
+            return View(products);
         }
     }
 }
