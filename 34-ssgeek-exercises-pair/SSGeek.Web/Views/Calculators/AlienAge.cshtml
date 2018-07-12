@@ -10,7 +10,7 @@
     <select id="alien-age-select" asp-for="Planet" asp-items="AlienAgeModel.planets"></select>
     <div></div>
     <label id="earth-age-label" asp-for="EarthAge"></label>
-    <input id="earth-age-input" asp-for="EarthAge" type="text"/>
+    <input id="earth-age-input" asp-for="EarthAge" type="number"/>
 
     <input class="btn btn-default btn-small" type="submit" value="Calculate Age" />
 </form>

@@ -11,7 +11,7 @@
         <select id="alien-weight-select" asp-for="Planet" asp-items="AlienWeightModel.planets"></select>
         <div></div>
         <label id="earth-weight-label" asp-for="EarthWeight"></label>
-        <input type="text" asp-for="EarthWeight" />
+        <input type="number" asp-for="EarthWeight" />
         <input class="btn btn-default btn-sm" type="submit" value="Calculate" />
     </form>
 
