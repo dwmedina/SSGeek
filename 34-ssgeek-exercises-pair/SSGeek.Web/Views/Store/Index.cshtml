@@ -3,20 +3,20 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Solar System Geek Gift Shop</h2>
+
 <section id="space-store" class="centeredPanel">
     @{
-
+        <h2 id="space-store-header">Solar System Geek Gift Shop</h2>
         @foreach (var product in Model)
         {
-            <div id="space-product-image">
+            <div>
                 <a asp-controller="store" asp-action="detail" asp-route-id="@product.Id">
-                    <img src="~/images/@product.ImageName" alt="@product.Name" />
+                    <img id="space-product-image" src="~/images/@product.ImageName" alt="@product.Name" />
                 </a>
             </div>
             <div id="space-product-info">
-                <h4>@product.Name</h4>
-                <h4 class="text-primary">@product.Cost</h4>
+                <h4 id="space-product-name">@product.Name</h4>
+                <h4 id="space-product-cost" class="text-primary">@product.Cost.ToString("C")</h4>
             </div>
         }
 

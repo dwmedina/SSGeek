@@ -199,6 +199,35 @@ li a:hover {
     padding: 2rem;
 }
 
+/*** Space Store ***/
+#space-store {
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+#space-product-info {
+    margin-top: 1.5rem;
+}
+
+#space-store-header {
+    grid-column: 1 / span 2;
+    padding: 1.5rem;
+}
+
+#space-product-image {
+    height: 15rem;
+    padding: 1rem;
+}
+
+#space-product-name {
+    font-weight: bold;
+}
+
+#space-product-cost {
+    color: #00A8E1;
+    font-weight: bold;
+}
+
 
 .planets * {
     color: #FFFFFF;
