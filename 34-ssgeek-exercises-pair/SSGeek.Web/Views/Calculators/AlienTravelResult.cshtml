@@ -1,7 +1,7 @@
 ﻿@model AlienTravelModel
 @{
     ViewData["Title"] = "AlienTravelResult";
-    var years = Model.CalculateTimeToTravel() / 8706;
+    var years = Math.Round(Model.CalculateTimeToTravel() / 8706, 2);
 }
 
 

@@ -116,6 +116,10 @@ li a:hover {
 
 /*** Age Calculator ***/
 
+#alien-age-result {
+    display: flex;
+}
+
 #alien-age-header {
     padding: 2rem;
     text-align: center;
@@ -129,7 +133,6 @@ li a:hover {
     margin-left: 4rem;
 }
 
-/* TODO: Style all images for all Results pages to have a height of 15rem; */
 /*** Travel Calculator ***/
 
 #alien-travel-result-header {
@@ -171,6 +174,10 @@ li a:hover {
 #travel-image, #age-image, #weight-image {
     height: 15rem;
     margin: 1rem;
+}
+
+#alien-travel-result {
+    display: flex;
 }
 
 #travel-result-info {
