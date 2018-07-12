@@ -129,7 +129,7 @@ li a:hover {
     margin-left: 4rem;
 }
 
-
+/* TODO: Style all images for all Results pages to have a height of 15rem; */
 /*** Travel Calculator ***/
 
 #alien-travel-result-header {
@@ -169,7 +169,8 @@ li a:hover {
 }
 
 #travel-image, #age-image, #weight-image {
-    height: 20rem;
+    height: 15rem;
+    margin: 1rem;
 }
 
 #travel-result-info {
