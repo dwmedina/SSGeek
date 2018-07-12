@@ -22,7 +22,8 @@ namespace SSGeek.Web.DAL
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    var reader = cmd.ExecuteReader();
+                    cmd.Parameters.AddWithValue("@id", id);
+                    var reader = cmd.ExecuteReader();                    
                     // only one product, so we need an if instead of while
                     if (reader.Read())
                     {
@@ -63,6 +64,7 @@ namespace SSGeek.Web.DAL
             }
             return products;
         }
+
         public Product MapRowToProduct (SqlDataReader reader)
         {
             return new Product()
