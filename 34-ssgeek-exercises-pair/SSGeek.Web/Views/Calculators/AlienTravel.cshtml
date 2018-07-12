@@ -12,7 +12,7 @@
         <select id="travel-style-select" asp-for="ModeOfTransport" asp-items="AlienTravelModel.transportationModes"></select>
         <div></div>
         <label id="alien-travel-age" asp-for="EarthAge">Enter your Earth age</label>
-        <input id="alien-travel-age-input" type="text" asp-for="EarthAge" />
+        <input id="alien-travel-age-input" type="number" asp-for="EarthAge" />
         <div></div>
         <input id="alien-travel-button" class="btn btn-default btn-sm" type="submit" value="Calculate Travel Time" />
     </form>
