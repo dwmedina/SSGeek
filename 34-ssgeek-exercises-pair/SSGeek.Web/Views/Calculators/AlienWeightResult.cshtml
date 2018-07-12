@@ -4,9 +4,11 @@
     ViewData["Title"] = "Alien Weight Result";
 }
 
+<h1 id="alien-weight-result-header">Your Alien Weight</h1>
 
-<section id="calculatorResult" class="centeredPanel">
+<section id="alien-weight-result" class="centeredPanel">
+    <div></div>
     <img id="weight-image" src="~/images/@(Model.Planet).jpg" />
-    <h1>Your weight on @Model.Planet is @Model.GetConvertedWeight() lbs. </h1>
+    <h1>If you are @Model.EarthWeight lbs on planet Earth, you would weigh @Model.GetConvertedWeight() lbs on @Model.Planet </h1>
 
 </section>
