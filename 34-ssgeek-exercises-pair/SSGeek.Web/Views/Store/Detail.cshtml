@@ -17,7 +17,8 @@
     <br />
     <form id="Add-To-Cart-Form" asp-action="AddToCart" asp-controller="store" method="post">
         <label class="detail-label" asp-for="Quantity"></label>
-        <input class="detail-input" asp-for="Quantity" type="number" placeholder="Enter a quantity ex. 5" required />
+        <input class="detail-input" asp-for="Quantity" type="number" required />
+        <span asp-validation-for="Quantity"></span>
 
         <input asp-for="Product.Id" type="hidden" />
         <input type="submit" value="Add To Cart" />
