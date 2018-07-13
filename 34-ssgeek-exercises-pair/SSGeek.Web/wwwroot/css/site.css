@@ -228,6 +228,25 @@ li a:hover {
     font-weight: bold;
 }
 
+#detail-img {
+    height:20rem;
+    padding:1rem;
+    float:left;
+}
+
+.detail-cost {
+    margin-top: 4.5rem;
+}
+
+.detail-label {
+    margin:1.2rem;
+}
+
+section.centeredPanel h2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
 
 .planets * {
     color: #FFFFFF;

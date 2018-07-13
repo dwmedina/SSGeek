@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SSGeek.Web.DAL;
+using SSGeek.Web.Models;
 
 namespace SSGeek.Web.Controllers
 {
@@ -22,6 +23,13 @@ namespace SSGeek.Web.Controllers
             var products = dal.GetProducts();
 
             return View(products);
+        }
+
+        public IActionResult Detail (int id)
+        {
+            var p = dal.GetProduct(id);
+            var sci = new ShoppingCartItem() { Product=p};
+            return View(sci);
         }
     }
 }
