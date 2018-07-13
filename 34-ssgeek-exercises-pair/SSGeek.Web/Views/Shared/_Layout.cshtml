@@ -26,16 +26,17 @@
     <nav>
         <h2>Explore The Solar System</h2>
         <p> Use these state of the art web applications to learn more about the solar system! </p>
-        <ul>            
-            <li><a asp-action="AlienWeight" asp-controller="Calculators">Alien Weight Calculator</a></li> 
+        <ul>
+            <li><a asp-action="AlienWeight" asp-controller="Calculators">Alien Weight Calculator</a></li>
             <li><a asp-action="Alienage" asp-controller="Calculators">Alien Age Calculator</a></li>
             <li><a asp-action="Alientravel" asp-controller="Calculators">Alien Travel Calculator</a></li>
             <li><a asp-action="Index" asp-controller="forum">Space Forum</a></li>
+            <li><a asp-action="Index" asp-controller="store">Space Store</a></li>
         </ul>
     </nav>
 
     @RenderBody()
-    
+
     <footer>
         <p>&copy; 2018 - SSGeek.Web</p>
     </footer>
@@ -60,6 +61,7 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+    <partial name="_ValidationScriptsPartial" />
 
     @RenderSection("Scripts", required: false)
 </body>

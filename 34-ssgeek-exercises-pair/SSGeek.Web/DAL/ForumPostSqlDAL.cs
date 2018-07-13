@@ -7,17 +7,13 @@ using SSGeek.Web.Models;
 
 namespace SSGeek.Web.DAL
 {
-    public class ForumPostSqlDAL 
+    public class ForumPostSqlDAL : IForumDAL
     {
         /// <summary>
         /// Connection string to database.
         /// </summary>
-        private string ConnectionString { get; } 
+        private readonly string ConnectionString = @"Data Source=.\sqlexpress;Initial Catalog=SSGeek;Integrated Security=True";
 
-        public ForumPostSqlDAL (string connectionString)
-        {
-            this.ConnectionString = connectionString;
-        }
 
         /// <summary>
         /// Gets all existing forum posts in the database.
@@ -53,7 +49,7 @@ namespace SSGeek.Web.DAL
         /// </summary>
         /// <param name="reader"></param>
         /// <returns></returns>
-        private ForumPostModel MapRowToPost(SqlDataReader reader)
+        public ForumPostModel MapRowToPost(SqlDataReader reader)
         {
             return new ForumPostModel()
             {

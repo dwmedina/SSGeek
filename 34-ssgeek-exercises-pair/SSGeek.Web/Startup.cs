@@ -35,6 +35,7 @@ namespace SSGeek.Web
             services.AddSession();
 
             services.AddTransient<IProductDAL, ProductSqlDAL>();
+            services.AddTransient<IForumDAL, ForumPostSqlDAL>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

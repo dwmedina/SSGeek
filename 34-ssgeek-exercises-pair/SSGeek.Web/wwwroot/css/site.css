@@ -372,5 +372,9 @@ label.label {
 }
 
 .forum-post-info {
-    display:inline-block;
+    display:block;
+}
+
+#submit-post {
+    margin-left:45rem;
 }

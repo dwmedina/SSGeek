@@ -8,6 +8,12 @@
 <section id="spaceForum" class="centeredPanel">
     <h2>Index</h2>
 
+    @if (TempData["Show_Message"] != null)
+    {
+        <br />
+        <p class="alert-success text-center">Your message has been posted!</p>
+    }
+
     @* asp-action=post GETs the forum for us *@
 
     <p class="text-center"><a asp-action="post" asp-controller="forum">Post a message</a></p>

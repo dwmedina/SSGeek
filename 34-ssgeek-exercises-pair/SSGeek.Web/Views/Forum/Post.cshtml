@@ -6,21 +6,25 @@
 <section id="calculatorResult" class="centeredPanel">
     <h2>Post</h2>
     <form method="post" asp-action="post" asp-controller="forum">
-        @* People need to have a username to post *@<div class="forum-post-info">
+        @* People need to have a username to post *@
+        <div class="forum-post-info">
             <label class="label" asp-for="Username"></label>
-            <input asp-for="Username" placeholder="required" required />
+            <input asp-for="Username" placeholder="required" />
+            <span asp-validation-for="Username"></span>
         </div>
         <div class="forum-post-info">
             <label class="label" asp-for="Subject"></label>
             <input asp-for="Subject" placeholder="Subject" />
+        <span asp-validation-for="Subject"></span>
         </div>
         <div class="forum-post-info">
 
             <label class="label" asp-for="Message"></label>
             @* Text-area isn't necessary but it looks nice *@
             @* People need to post actual messages, not empty posts into the database *@
-            <textarea asp-for="Message" placeholder="ex. I'm only .5yrs on Jupiter!" required></textarea>
+            <textarea asp-for="Message" placeholder="ex. I'm only .5yrs on Jupiter!" ></textarea>
+        <span asp-validation-for="Message"></span>
         </div>
-        <input type="submit" value="Post" />
+        <input id="submit-post" type="submit" value="Post" />
     </form>
 </section>

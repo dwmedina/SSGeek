@@ -10,12 +10,18 @@ namespace SSGeek.Web.Controllers
 {
     public class ForumController : Controller
     {
+        private IForumDAL dal;
+
+        public ForumController(IForumDAL dal)
+        {
+            this.dal = dal;
+        }
+
         // 1.  We need to make our Index View first so that visitors can view their Space Posts
         [HttpGet]
         public IActionResult Index()
         {
             // 2.  Create our Forum DAL with a connection string to the database
-            var dal = new ForumPostSqlDAL(@"Data Source=.\sqlexpress;Initial Catalog=SSGeek;Integrated Security=True");
             var posts = dal.GetAllPosts();
             return View(posts);
         }
@@ -31,19 +37,23 @@ namespace SSGeek.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Post(ForumPostModel post)
         {
-            var dal = new ForumPostSqlDAL(@"Data Source=.\sqlexpress;Initial Catalog=SSGeek;Integrated Security=True");
-            var didPost=dal.SaveNewPost(post);
+            if (ModelState.IsValid)
+            {
+                var didPost = dal.SaveNewPost(post);
+                if (didPost)
+                {
+                    TempData["Show_Message"] = true;
+                    return RedirectToAction("index", "forum");
+                }
+                else
+                {
+                    return Forbid();
+                }
+            }
 
+            return View(post);
             // If we made a post, direct them to the forum where they can view messages
-            if (didPost)
-            {
-                return RedirectToAction("index", "forum");
 
-            }
-            else
-            {
-                return Forbid();
-            }
         }
     }
 }
