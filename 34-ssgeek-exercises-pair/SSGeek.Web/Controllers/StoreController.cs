@@ -40,8 +40,17 @@ namespace SSGeek.Web.Controllers
         public IActionResult AddToCart(ShoppingCartItem item)
         {
             var cart = GetShoppingCart();
+            // call the DAL to prevent price manipulation
+            var itemToAdd = dal.GetProduct(item.Product.Id);
+            // make the corresponding product the item to add to our cart
+            item.Product = itemToAdd;
             cart.AddToCart(item.Product, item.Quantity);
 
+            // save the cart to session
+            HttpContext.Session.Set(Session_Key, cart);
+
+            // keep users on the page
+            return RedirectToAction("viewcart");
         }
 
         public ShoppingCart GetShoppingCart()
