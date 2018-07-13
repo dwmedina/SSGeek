@@ -9,19 +9,19 @@
             <img id="detail-img" src="~/images/@Model.Product.ImageName" />
         </div>
         <div id="detailInfo">
-            <h2>@Model.Product.Name</h2>
+            <h2 id="detail-product-name">@Model.Product.Name</h2>
             <h4 id="space-product-cost" class="detail-cost">@Model.Product.Cost.ToString("C")</h4>
             <p id="detail-description">@Model.Product.Description</p>
         </div>
     </div>
     <br />
     <form id="Add-To-Cart-Form" asp-action="AddToCart" asp-controller="store" method="post">
-        <label class="detail-label" asp-for="Quantity"></label>
+        <label class="detail-label" asp-for="Quantity">Quantity to buy</label>
         <input class="detail-input" asp-for="Quantity" type="number" required />
         <span asp-validation-for="Quantity"></span>
 
         <input asp-for="Product.Id" type="hidden" />
-        <input type="submit" value="Add To Cart" />
+        <input id="add-to-cart-btn" type="submit" value="Add To Cart" />
     </form>
 
 </section>
