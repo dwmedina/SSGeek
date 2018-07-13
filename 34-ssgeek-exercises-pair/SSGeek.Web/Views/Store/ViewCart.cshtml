@@ -1,0 +1,36 @@
+﻿@model ShoppingCart
+@{
+    ViewData["Title"] = "ViewCart";
+}
+
+<section id="view-space-cart" class="centeredPanel">
+    <h2>Solar System Geek Gift Shop</h2>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td><img src="~/images/@item.Product.ImageName" alt="@item.Product.Name" /></td>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Product.Cost.ToString("C")</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.SubTotal.ToString("C")</td>
+                </tr>
+            }
+            <tr>
+                <td colspan="3"></td>
+                <td>Grand Total</td>
+                <td>@Model.GrandTotal.ToString("C")</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

@@ -195,6 +195,7 @@ li a:hover {
     display: flex;
 }
 
+
 #travel-result-info {
     padding: 2rem;
 }
@@ -353,6 +354,7 @@ section.centeredPanel {
     }
 
 
+/*** Space Forum ***/
 /* 
     The width should be inherited so that 
     the stripe resembles the width of our section.centeredPanel
@@ -371,8 +373,12 @@ label.label {
     vertical-align: top !important;
 }
 
+#space-forum-post {
+    text-align: center;
+}
+
 .forum-post-info {
-    display:block;
+    display: block;
 }
 
 #submit-post {

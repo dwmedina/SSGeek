@@ -17,7 +17,7 @@ namespace SSGeek.Web.Models
             // If it doesn't exist, then add the item to the cart for the first time
             if (existingItem == null)
             {
-                existingItem = new ShoppingCartItem() { Product = p, Quantity = 0 };
+                existingItem = new ShoppingCartItem() { Product = p, Quantity = quantity };
                 Items.Add(existingItem);
             }
 

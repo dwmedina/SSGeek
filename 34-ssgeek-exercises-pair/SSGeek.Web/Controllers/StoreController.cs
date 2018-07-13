@@ -67,5 +67,13 @@ namespace SSGeek.Web.Controllers
 
             return cart;
         }
+
+        [HttpGet]
+        public IActionResult ViewCart()
+        {
+            var cart = GetShoppingCart();
+
+            return View(cart);
+        }
     }
 }
