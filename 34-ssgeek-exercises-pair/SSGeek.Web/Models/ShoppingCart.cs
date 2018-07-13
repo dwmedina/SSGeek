@@ -22,7 +22,7 @@ namespace SSGeek.Web.Models
             }
 
             // Update the item's quantity
-            existingItem.Quantity += quantity;
+            existingItem.Quantity = quantity;
 
             return true;
         }

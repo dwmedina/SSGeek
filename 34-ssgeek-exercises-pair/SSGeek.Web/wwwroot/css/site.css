@@ -220,6 +220,10 @@ li a:hover {
     padding: 1rem;
 }
 
+#grand-total-label {
+    padding: 1.5rem;
+}
+
 #space-product-name {
     font-weight: bold;
 }
