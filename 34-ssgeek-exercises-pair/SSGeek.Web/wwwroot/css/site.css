@@ -234,12 +234,17 @@ li a:hover {
     float:left;
 }
 
-.detail-cost {
-    margin-top: 4.5rem;
-}
-
 .detail-label {
     margin:1.2rem;
+}
+
+#detail-content {
+    display:flex;
+    align-items:center;
+}
+
+#Add-To-Cart-Form {
+    text-align:center;
 }
 
 section.centeredPanel h2 {
