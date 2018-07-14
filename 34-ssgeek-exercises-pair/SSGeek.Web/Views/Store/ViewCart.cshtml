@@ -12,7 +12,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th>Total</th>
+                <th id="total-header">Total</th>
             </tr>
         </thead>
         <tbody>
@@ -23,13 +23,20 @@
                     <td>@item.Product.Name</td>
                     <td>@item.Product.Cost.ToString("C")</td>
                     <td>@item.Quantity</td>
-                    <td>@item.SubTotal.ToString("C")</td>
+                    <td id="subtotal">@item.SubTotal.ToString("C")</td>
                 </tr>
             }
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td id="grand-total-label">Grand Total</td>
+                    <td id="grand-total-amount">@Model.GrandTotal.ToString("C")</td>
+                </tr>
             <tr>
-                <td colspan="3"></td>
-                <td id="grand-total-label">Grand Total</td>
-                <td>@Model.GrandTotal.ToString("C")</td>
+                <td colspan="4"></td>
+                <td id="space-checkout"><a asp-controller="store">Check out</a></td>
             </tr>
         </tbody>
     </table>
